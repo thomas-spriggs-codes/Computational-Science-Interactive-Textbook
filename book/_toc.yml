@@ -1,5 +1,5 @@
 format: jb-book
-root: intro
+root: replace_with_colophon
 parts: 
  - caption: Introduction
    numbered: False
