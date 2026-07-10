@@ -118,7 +118,7 @@ $$
 
 ### Order of the errors made
 
-Using a Taylor expansion, one can also estimate the errors made in the above approximations of the derivative (see for example the <a href=https://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives>wikipedia page</a>){cite:p}`finite_diff_2`. 
+Using a Taylor expansion, one can also estimate the errors made in the above approximations of the derivative (see for example {cite:p}`finite_diff_2`). 
 
 The forward difference approximation result in an error $\epsilon_F = f'_F(x,h) - f'(x)$ that is *first order* in $h$, ie. proportional to $h$:
 
@@ -569,9 +569,7 @@ Can you explain why the forward difference overestimates the derivative for $x =
 
 In this section, we will calculate the scaling of the error incurred by different techniques for numerical differentiation of a function of step size $h$ and compare this with what we expect. 
 
-**Exercise 6** Write a loop that calculates the numerical derivative $f'(x)$ at $x=1$, using the forward, center, and backwards difference formulats. In your loop, perform your calculation for 100 different values of $h$ spaced evenly spaced on log scale from $h = 1\times10^{-6}$ to $h = 1$. For this, you can use the `geomspace`  function:
-
-https://docs.scipy.org/doc/numpy/reference/generated/numpy.geomspace.html
+**Exercise 6** Write a loop that calculates the numerical derivative $f'(x)$ at $x=1$, using the forward, center, and backwards difference formulats. In your loop, perform your calculation for 100 different values of $h$ spaced evenly spaced on log scale from $h = 1\times10^{-6}$ to $h = 1$. For this, you can use the `geomspace`  function {cite:p}`numpy_geomspace`
 
 You can also use `logspace` if you want, but it is a bit tricker since using the `logspace` function, you can't specify the endpoints . 
 
@@ -1100,9 +1098,7 @@ answer_3_10_1 = dvdt
 
 ### Numpy functions for derivatives
 
-Now that we have implemented the code for calculating derivatives ourselves, and we understand how it works, it is also useful to know that the numpy library also provides functions for calculating derivatives of (multidimensional) numpy arrays:
-
-https://docs.scipy.org/doc/numpy/reference/generated/numpy.diff.html
+Now that we have implemented the code for calculating derivatives ourselves, and we understand how it works, it is also useful to know that the numpy library also provides functions for calculating derivatives of (multidimensional) numpy arrays {cite:p}`numpy_diff`.
 
 The most important parameters of this function are:
 
