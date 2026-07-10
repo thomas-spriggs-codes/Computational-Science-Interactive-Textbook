@@ -42,8 +42,6 @@ plt.rcParams['figure.dpi']=100
 
 We will begin with considering calculating the numerical derivatives of functions, specifically using the technique of finite differences{cite:p}`finite_diff` :
 
-https://en.wikipedia.org/wiki/Finite_difference
-
 In the simplest case, the derivative we want to calculate might be the derivative of a functions that we have an analytical expression for, such as $f(x) = ax^2$. In contrast to analytical integration, which can sometimes be challenging to perform and find a closed solution for, taking derivatives of functions is in general not so difficult (you likely learned this in your first calculus course!). For example, the derivative of $f(x)$ above is simply $f'(x) = 2ax$. 
 
 You might ask: if it is always possible to analytically calculate the derivative of a function, why would I bother calculating the derivative with a computer? Some quick answers:

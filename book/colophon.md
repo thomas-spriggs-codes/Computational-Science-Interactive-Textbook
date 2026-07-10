@@ -12,7 +12,7 @@ Computational Science, Computational Physics, Numerical Methods
 TU Delft OPEN Publishing | Delft University of Technology, The Netherlands
 
 ## Copyright statement
-![image](CC-BY_logo.png) 
+![image](CC-BY_logo.png) \\
 This work is licensed under a Creative Commons Attribution 4.0 International (<a href=https://creativecommons.org/licenses/by/4.0/>CC BY 4.0</a>) licence unless otherwise stated.
 ©2026 published by TU Delft OPEN Publishing on behalf of the authors 
 
