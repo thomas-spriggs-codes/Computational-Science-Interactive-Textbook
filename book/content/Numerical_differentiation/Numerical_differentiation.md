@@ -40,7 +40,7 @@ plt.rcParams['figure.dpi']=100
 
 ### Introduction
 
-We will begin with considering calculating the numerical derivatives of functions, specifically using the technique of finite differences:
+We will begin with considering calculating the numerical derivatives of functions, specifically using the technique of finite differences{cite:p}`finite_diff` :
 
 https://en.wikipedia.org/wiki/Finite_difference
 
@@ -120,7 +120,7 @@ $$
 
 ### Order of the errors made
 
-Using a Taylor expansion, one can also estimate the errors made in the above approximations of the derivative (see for example the <a href=https://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives>wikipedia page</a>).
+Using a Taylor expansion, one can also estimate the errors made in the above approximations of the derivative (see for example the <a href=https://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives>wikipedia page</a>){cite:p}`finite_diff_2`. 
 
 The forward difference approximation result in an error $\epsilon_F = f'_F(x,h) - f'(x)$ that is *first order* in $h$, ie. proportional to $h$:
 
@@ -1192,4 +1192,9 @@ from validate_answers import *
 
 with open(location):
     pass # Initially this notebook does not recognise the file unless someone tries to read it first
+```
+
+
+```{bibliography}
+:style: unsrt
 ```
