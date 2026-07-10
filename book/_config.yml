@@ -9,8 +9,6 @@ only_build_toc_files: true                           # Replace this with false i
 
 sphinx:                                              # Options passed on to the underlying sphinx-parser
   config:
-    bibtex_reference_style: author_year
-    bibtex_bibfiles: "references.bib"
     language: en                                     # Defines language (English) of everything except the content itself. For Dutch: replace with `nl`
     html_js_files:
     - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js # Required for live code: https://teachbooks.io/manual/features/live_code.html
@@ -47,3 +45,6 @@ sphinx:                                              # Options passed on to the 
     - sphinx_dropdown_toggle                         # Adds a button to toggle all dropdowns with one click
     - sphinx_proof                                   # Allows you to add various mathy admonitions to your book: https://sphinx-proof.readthedocs.io/en/latest/
     - sphinx_code_examples                           # Allows you to include code blocks in examples: https://teachbooks.io/manual/_git/github.com_TeachBooks_sphinx-code-examples/main/MANUAL.html
+
+bibtex_bibfiles: 
+    - references.bib                                   # Required for references, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
