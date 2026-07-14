@@ -37,13 +37,11 @@ Often in physics, we will want to calculate the integral of a function, which ca
 
 ![image](integral.png)
 
-Unlike taking a derivative, calculating the analytical form of a derivative is not always easy, and is not even guaranteed to have an analytical closed form! This is one of the reasons it is useful to calculate integrals numerically, know as Numerical Integration:
-
-https://en.wikipedia.org/wiki/Numerical_integration
+Unlike taking a derivative, calculating the analytical form of a derivative is not always easy, and is not even guaranteed to have an analytical closed form! This is one of the reasons it is useful to calculate integrals numerically, know as Numerical Integration{cite:p}`wiki_num_int`:
 
 ### Discretisation
 
-As is the case for any calculation in a computer, the first step is to break our continuous variable $x$ into list of numbers `x[i]` separated by (typically) fixed steps (know as <a href=https://en.wikipedia.org/wiki/Discretization>discretising</a>), along with corresponding set of $y$ values $y[i]$:
+As is the case for any calculation in a computer, the first step is to break our continuous variable $x$ into list of numbers `x[i]` separated by (typically) fixed steps (know as discretizing {cite:p}`wiki_discretisation`), along with corresponding set of $y$ values $y[i]$:
 
 ![image](discrete.png)
 
@@ -71,9 +69,7 @@ An obvious improvement over the sum rule above is to replace the "flat tops" of 
 
 ![image](trapezoid_rule.png)
 
-This is known as the Trapezoidal rule: 
-
-https://en.wikipedia.org/wiki/Trapezoidal_rule
+This is known as the Trapezoidal rule{cite:p}`wiki_trap_rule`: 
 
 We can already see that this is giving a much better approximation! The formula for the estimated integral using the trapezoidal rule is given by:
 
@@ -85,9 +81,7 @@ The formula is in fact nearly identical to the simple sum, except that instead o
 
 ### Simpson's rule
 
-While the trapezoidal rule is clearly much better, we can do even better if we use a quadratic interpolation instead of a linear interpolation between the points. This technique is known as Simpson's rule: 
-
-https://en.wikipedia.org/wiki/Simpson%27s_rule
+While the trapezoidal rule is clearly much better, we can do even better if we use a quadratic interpolation instead of a linear interpolation between the points. This technique is known as Simpson's rule{cite:p}`wiki_simps_rule`: 
 
 In this case, the estimate of the integral is given by a more complicated sum involving different coefficients for the odd and even points:
 
@@ -266,7 +260,7 @@ For this, it is always a good idea to use your code to perform a calculation for
 
 Here, we will explore such a "benchmarking" of the Trapezoidal rule for calculating integrals, and explore the number of steps needed to achieve a given accuracy. 
 
-**Exercise 3:** Use a `while` loop to find the minimum value of $N$ you need to get the correct answer to <a href=https://en.wikipedia.org/wiki/Approximation_error#Formal_Definition>relative error</a> of less than $10^{-6}$ = one part per million (ppm).
+**Exercise 3:** Use a `while` loop to find the minimum value of $N$ you need to get the correct answer to relative error{cite:p}`wiki_approximation_error` of less than $10^{-6}$ = one part per million (ppm).
 
 The definition of relative error is as follows: if $v$ is the correct answer and $v_{\rm approx}$ is the approximate answer, the relative error $\eta$ is defined as:
 
@@ -276,7 +270,7 @@ $$
 
 Your while loop should have an "emergency exit" test that stops the loop with a `break` statement if $N$ exceeds 10,000.
 
-_Tip:_ If you have trouble with your exit condition on your while loop, it might be handy to include a code line `print("N %d eta %e" % (N,eta))` to keep track of what is going on in your code. This is an <a href=https://pythondebugging.com/articles/python-debugging-with-print-statements>elementary form</a> of <a href=https://en.wikipedia.org/wiki/Debugging>debugging</a>.
+_Tip:_ If you have trouble with your exit condition on your while loop, it might be handy to include a code line `print("N %d eta %e" % (N,eta))` to keep track of what is going on in your code. This is an elementary form of debugging{cite:p}`python_debugging`.
 
 ```python
 
@@ -501,7 +495,7 @@ Every element in your output array is then conceptually defined by computing an 
 
 (Of course, there may be cleaver and more computationally efficient ways to do it as well, but that is not the focus right now...)
 
-_Recommendation_ "<a href=https://en.wikipedia.org/wiki/Modular_programming>Modularize</a>" your code by creating a function that does the trapezoidal integration of an array, this will make your code easier to write and use. 
+_Recommendation_ Modular programming{cite:p}`wiki_modular_prog` your code by creating a function that does the trapezoidal integration of an array, this will make your code easier to write and use. 
 
 
 ```python
@@ -668,21 +662,21 @@ Now that we have some understanding of how numerical integration works, it is al
 
 **Simple sum:** 
 
-https://docs.scipy.org/doc/numpy/reference/generated/numpy.sum.html
+{cite:p}`numpy_sum`
 
 **Trapezoidal rule:**
 
-https://docs.scipy.org/doc/numpy/reference/generated/numpy.trapz.html
+{cite:p}`numpy_traps`
 
 **Cumulative sum:**
 
-https://docs.scipy.org/doc/numpy/reference/generated/numpy.cumsum.html
+{cite:p}`numpy_cumsum`
 
 Numpy does not include Simpson's rule (since for small $h$ the trapezoidal rule is often accurate enough), but in case you want to use it, it is available in the scipy package:
 
 **Simpson's rule:**
 
-https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.simps.html
+{cite:p}`numpy_simps`
 
 Because all of the functions above work with vectorization (see notebook 2b), they can be hundreds of times faster for very large arrays, so it is useful to use them for large calculations. 
 

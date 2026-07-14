@@ -22,6 +22,7 @@ All need to be replaced by APA 7 formatted references, possibly using bibtex
     https://numpy.org/doc/stable/reference/generated/numpy.trapezoid.html
     https://numpy.org/doc/stable/reference/generated/numpy.cumsum.html
     TODO: numpy.simps has been depriated: is this or trapz even used, or just pointed to? Just pointed to, easy change
+    https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.simpson.html
 
 3. Root finding
     https://en.wikipedia.org/wiki/Bisection_method

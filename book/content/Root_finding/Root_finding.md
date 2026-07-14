@@ -30,7 +30,7 @@ import matplotlib.pyplot as plt
 
 ## Binary search or bisection method
 
-The <a href="https://en.wikipedia.org/wiki/Bisection_method">bisection method</a> is a simple algorithm that iteratively ’traps’ the root of a function in an ever smaller interval. The bisection method is initiated by choosing two values $a$ and $b$ on the $x$-axis in which the to-be-determined root $f(x) = 0$ is located. By definition, the root is in an interval if there is a sign change in the function, i.e. either $f(a) > 0$ and $f(b) < 0$ or $f(a) < 0$ and $f(b) > 0$ (the product $f(a) \cdot f(b)$ is always negative). The bisection methods works in the following way
+The bisection method{cite:p}`wiki_bisection` is a simple algorithm that iteratively ’traps’ the root of a function in an ever smaller interval. The bisection method is initiated by choosing two values $a$ and $b$ on the $x$-axis in which the to-be-determined root $f(x) = 0$ is located. By definition, the root is in an interval if there is a sign change in the function, i.e. either $f(a) > 0$ and $f(b) < 0$ or $f(a) < 0$ and $f(b) > 0$ (the product $f(a) \cdot f(b)$ is always negative). The bisection methods works in the following way
 * Determine the initial interval $[a, b]$ enclosing the root, you can do this by plotting the function and determine an approximate interval.
 * Calculate the midpoint of the interval
 * Check in which interval the root is located, again by looking at the sign change over both intervals,
@@ -161,7 +161,7 @@ answer_5_01_1 = np.copy(xsol)
 ```
 
 
-The <a href="https://en.wikipedia.org/wiki/Wien%27s_displacement_law">displacement law </a> is the basis for the method of optical pyrometry, a method for measuring the temperatures of objects by observing the color of the thermal radiation they emit. The method is commonly used to estimate the surface temperatures of astronomical bodies, such as the Sun. 
+The displacement law{cite:p}`wiki_wien_law` is the basis for the method of optical pyrometry, a method for measuring the temperatures of objects by observing the color of the thermal radiation they emit. The method is commonly used to estimate the surface temperatures of astronomical bodies, such as the Sun. 
 
 **Exercise 2**
 The wavelength peak in the Sun's emitted radiation occurs at $\lambda=502$ nm. Derive from the equations above, your value of $x$, and the wavelength $\lambda$ an estimate of the surface temperature of the Sun and store it in variable `tempsun`.
@@ -212,7 +212,7 @@ answer_5_02_1 = np.copy(tempsun)
 
 ## Newton's method
 
-If the derivative of $f(x)$ is known (analytically or numerically) the most common method to solve the roots is the <a href="https://en.wikipedia.org/wiki/Newton%27s_method">Newton's (or Newton-Raphson) method</a>. Newton's method is an iterative method based on the Taylor series expansion of the function at first order (tangent only). 
+If the derivative of $f(x)$ is known (analytically or numerically) the most common method to solve the roots is the Newton's (or Newton-Raphson) method{cite:p}`wiki_newton_method`. Newton's method is an iterative method based on the Taylor series expansion of the function at first order (tangent only). 
 
 The figure below illustrates Newton's method. Let the unknown true root of $f(x)$ be $x_{r}$, and $x_1$ a first estimate of it. As the function at the true root is zero, we can write the Taylor expansion around $x_1$ as
 
