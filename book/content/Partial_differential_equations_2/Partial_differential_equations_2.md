@@ -442,7 +442,7 @@ A very efficient way to solve the wave equation above is one that you are alread
 
 This method is called the "spectral method". The idea is that the linear wave equation above can be solved using separation of variables, which leads to two separate equations, one in time and the other in space, which you can solve separately.
 
-The solutions of the spatial equation that results from the separation of variables gives you the shapes of the <a href=https://en.wikipedia.org/wiki/Normal_mode>normal modes</a>, or in quantum mechanics, the eigenmodes. 
+The solutions of the spatial equation that results from the separation of variables gives you the shapes of the normal modes{cite:p}`wiki_normal_mode`, or in quantum mechanics, the eigenmodes. 
 
 The behaviour of eigenmodes in time is very simple: they always have the same shape but they oscillate in time. If you initial condition is an eigenmode, then your time dependence is very simple!
 
@@ -471,9 +471,7 @@ $$
 
 and $k$ is the index of the Fourier sine coefficient (starting from 1). We can then find $u(x,t)$ by just taking the inverse Fourier sine transform of $u_k(t)$.
 
-The decomposition of a function into sine waves is a common task (it is actually a Discrete Sine Transform (DST), a type of Fourier transform!). Fortunately, there are pre-programmed functions built into the `scipy` package for the DST, and for the inverse DST, which can help save us the time of coding them ourselves:
-
-https://docs.scipy.org/doc/scipy/reference/generated/scipy.fftpack.dst.html
+The decomposition of a function into sine waves is a common task (it is actually a Discrete Sine Transform (DST), a type of Fourier transform!). Fortunately, there are pre-programmed functions built into the `scipy` package for the DST, and for the inverse DST, which can help save us the time of coding them ourselves{cite:p}`scipy_dst`:
 
 One confusing aspect of the DST is that there are many different "types", which have slighly different conventions of the offsets and endpoints of the sine waves used in the transform. The one we will use is the on of "type I"
 

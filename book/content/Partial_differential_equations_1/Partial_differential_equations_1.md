@@ -78,7 +78,7 @@ $$
 \rho(x,y,z)
 $$
 
-This equation is hopefully well known to you from your course in <a href=https://en.wikipedia.org/wiki/Electrostatics>electrostatics</a>: it is the equation that determines the electrostatic potential $\phi(\vec{r})$ for a given distribution of charges $\rho(\vec{r})$. 
+This equation is hopefully well known to you from your course in electrostatics{cite:p}`wiki_electrostatics`: it is the equation that determines the electrostatic potential $\phi(\vec{r})$ for a given distribution of charges $\rho(\vec{r})$. 
 
 In this lecture, we will discuss how to solve a two-dimensional version of the equation. By working in 2D, we will keep the calculation times relatively short and it will be easy to visualize our results. The technique, however, can easily be extended into 3D in an obvious way.
 
@@ -140,7 +140,7 @@ The problem we are looking at is a boundary-value problem: to be able to solve f
 
 The way relaxation works is the following: we start with our fixed boundary condition on the outside of our simulation "box". We then start with an initial guess at the potential everywhere inside the box. What do we choose for this? It turns out that it **doesn't matter** what we choose: the techniques we will look at will always work no matter what you chose (which is handy!).
 
-(Note that here, we will consider only "metallic" fixed-potential boundary conditions, also know as the Dirichlet condition. One alternative is also the Neumann boundary condition, specifying no electric field perpendicular to the boundary. Another is periodic boundary conditions. In addition, there are more <a href=https://arxiv.org/abs/1510.04400>exotic boundary conditions</a> that allow, among other things, the simulation of an open boundary to infinity.)
+(Note that here, we will consider only "metallic" fixed-potential boundary conditions, also know as the Dirichlet condition. One alternative is also the Neumann boundary condition, specifying no electric field perpendicular to the boundary. Another is periodic boundary conditions. In addition, there are more exotic boundary conditions{cite:p}`biswas2015boundary` that allow, among other things, the simulation of an open boundary to infinity.)
 
 Once we have our boundary set and our initial guess, we then iterate through all the points in our simulation and replace the value of the potential at iteration $N+1$ with the value that would solve the equation we are solving, given the value of it's neighbors at that step of the iteration $N$. With $\rho(x,y) = 0$, this becomes:
 
@@ -868,7 +868,7 @@ $$
 
 Note that you can only apply this formula to the "interior" points of the simulation: for the "boundary points" at the edges of the simulation, you have no neighbors to fill in this equation! This leads to a problem: the matrix we will calculate for the charge density will be two pixels smaller in each direction (an MxM matrix for $\phi$ becomes an (M-2)x(M-2) matrix for the calculated $\sigma$). 
 
-However, in the example above, we have been using a "double pixel" metal (fixed voltage, <a href=https://en.wikipedia.org/wiki/Dirichlet_boundary_condition>Dirichlet</a>)) boundary condition. In this case, we know that any electric fields from charges inside the simulation must be fully screened by the first metal pixel, and cannot induce any charge in the second layer of "metal" pixels behind them. Because of this, if we want to (and it is handy to, for example, for plotting), we can make the calculated $\sigma$ matrix also MxM pixels and just set the outermost ones to zero. And if we create the matrix using `np.zeros` as below, then they already are zero, which is handy! 
+However, in the example above, we have been using a "double pixel" metal (fixed voltage, Dirichlet{cite:p}`wiki_dirichlet`)) boundary condition. In this case, we know that any electric fields from charges inside the simulation must be fully screened by the first metal pixel, and cannot induce any charge in the second layer of "metal" pixels behind them. Because of this, if we want to (and it is handy to, for example, for plotting), we can make the calculated $\sigma$ matrix also MxM pixels and just set the outermost ones to zero. And if we create the matrix using `np.zeros` as below, then they already are zero, which is handy! 
 
 **Exercise 5(b):** Calculate the (dimensionless) charge density for the simulation in question 5(a).
 

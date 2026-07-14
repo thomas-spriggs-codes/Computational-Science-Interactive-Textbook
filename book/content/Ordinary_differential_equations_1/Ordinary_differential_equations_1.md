@@ -37,13 +37,13 @@ plt.rcParams['figure.dpi'] = 100
 
 ## Background on first order ODEs
 
-<a href=https://en.wikipedia.org/wiki/Ordinary_differential_equation>Ordinary differential equations</a> are  equations that specify a relation between derivatives of a function and the function itself. A first order differential equation is one which involves only first-order derivatives:
+Ordinary differential equations{cite:p}`wiki_ODE` are  equations that specify a relation between derivatives of a function and the function itself. A first order differential equation is one which involves only first-order derivatives:
 
 $$
 \frac{dx}{dt} = f(x,t) 
 $$
 
-Here, $f(x,t)$ is an known function, $t$ is an independent variable, and one is interested in finding $x(t)$. A  example of a problem in physics that is described by a first-order ODE is the charging of a capacitor through a resistor (an <a href=https://en.wikipedia.org/wiki/RC_circuit>RC circuit</a>):
+Here, $f(x,t)$ is an known function, $t$ is an independent variable, and one is interested in finding $x(t)$. A  example of a problem in physics that is described by a first-order ODE is the charging of a capacitor through a resistor (an RC circuit{cite:p}`wiki_RC_circuit_dupe`):
 
 ![image](rc_circuit.png)
 
@@ -420,15 +420,11 @@ answer_11_3_1 = np.copy(x)
 
 ## Runge-Kutta integration
 
-As you may have noticed, although Euler integration seems to work pretty well for the RC circuit, it fails very badly for the Harmonic oscillator! The undamped harmonic oscillator is an example of a *stiff* equation which is numerically unstable for some type of solver algorithms:
-
-https://en.wikipedia.org/wiki/Stiff_equation
+As you may have noticed, although Euler integration seems to work pretty well for the RC circuit, it fails very badly for the Harmonic oscillator! The undamped harmonic oscillator is an example of a *stiff* equation which is numerically unstable for some type of solver algorithms{cite:p}`wiki_stiff`:
 
 The reason for this is that extrapolation of the derivative is a very poor approximation: so much so that it requires a very small time step to prevent the solution of the simple harmonic oscillator from diverging! Euler's method is particularly bad with so-called "stiff" equations.
 
-An improvement over the Euler method is to include a more accurate estimate of the derivative of the function defining the derivatives. Doing this in successive higher orders is called the Runge-Kutta (RK) technique:
-
-https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods
+An improvement over the Euler method is to include a more accurate estimate of the derivative of the function defining the derivatives. Doing this in successive higher orders is called the Runge-Kutta (RK) technique{cite:p}`wiki_Runge`:
 
 The basic idea of RK2 is that numerical derivatives give a much better estimate of the slope at the midpoint between two points rather than at the point itself (see also the lecture notebook for lecture 4). 
 
@@ -793,13 +789,9 @@ answer_11_6_2 = np.copy(V)
 
 In the above, we have implemented directly the Euler and Runge-Kutta methods of numerical integration with our own python code. Doing so, we have learned insight into how these techniques work and when and how things can go wrong! As we saw, the code is very simple (only a few lines) and using this code, we can directly solve relatively complex numerical problems in physics!
 
-In addition to coding the numerical integration routines yourself, the `scipy` package also has built-in routines for numerical integration of ODEs. In particular, here, we will learn how to use the `solve_ivp()` routine:
+In addition to coding the numerical integration routines yourself, the `scipy` package also has built-in routines for numerical integration of ODEs. In particular, here, we will learn how to use the `solve_ivp()` routine{cite:p}`scipy_solve_ivp`:
 
-https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html
-
-Reading the documentation page, you can see that the `solve_ivp()` routine takes several variables and has many optional parameters, some of which you can likely now understand having solved the problems yourself above. The parameter `method` controls which technique is used for the numerical integration: by default, it uses a variant of RK4. The scipy numerical integration routines also support some additional routines, such as the BDF method:
-
-https://en.wikipedia.org/wiki/Backward_differentiation_formula
+Reading the documentation page, you can see that the `solve_ivp()` routine takes several variables and has many optional parameters, some of which you can likely now understand having solved the problems yourself above. The parameter `method` controls which technique is used for the numerical integration: by default, it uses a variant of RK4. The scipy numerical integration routines also support some additional routines, such as the BDF method{cite:p}`wiki_back_diff`:
 
 which is more robust for integrating stiff differential equations like the undamped Harmonic oscillator. 
 
@@ -815,7 +807,7 @@ In the following exercises, we will explore how the `solve_ivp()` routine works 
 
 You will need to define a function `dVdt(t,V)`. By convention, this function should take time (the independent variable) as its first argument and the voltage value as it's second.  This function you will need to give as the first argument of the `solve_ivp()` function. 
 
-You will also need to pass a <a href=https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences>tuple</a> as the second argument of `solve_ivp()` to specify the start and end times.
+You will also need to pass a tuple{cite:p}`python_tuples` as the second argument of `solve_ivp()` to specify the start and end times.
 
 Finally, you will need to give `solve_ivp()` the initial value of the voltage in the third argument. Since `solve_ivp()` is capable of solving multidimensional simultaneous equations, and also higher order ODEs, this argument must be a list of initial values, one for each of the 1st order ODEs it is solving. Although the problem we are considering of the RC circuit is only a single first-order ODE, we still have to make our initial condition into an array (for example, a numpy array of size `(1,)`). For this case, you can provide a list with one element: `[V0]`, where `V0` is the value $V(t=0)$.
 

@@ -569,7 +569,7 @@ Can you explain why the forward difference overestimates the derivative for $x =
 
 In this section, we will calculate the scaling of the error incurred by different techniques for numerical differentiation of a function of step size $h$ and compare this with what we expect. 
 
-**Exercise 6** Write a loop that calculates the numerical derivative $f'(x)$ at $x=1$, using the forward, center, and backwards difference formulats. In your loop, perform your calculation for 100 different values of $h$ spaced evenly spaced on log scale from $h = 1\times10^{-6}$ to $h = 1$. For this, you can use the `geomspace`  function {cite:p}`numpy_geomspace`
+**Exercise 6** Write a loop that calculates the numerical derivative $f'(x)$ at $x=1$, using the forward, center, and backwards difference formulats. In your loop, perform your calculation for 100 different values of $h$ spaced evenly spaced on log scale from $h = 1\times10^{-6}$ to $h = 1$. For this, you can use the `geomspace`  function {cite:p}`numpy_geomspace`.
 
 You can also use `logspace` if you want, but it is a bit tricker since using the `logspace` function, you can't specify the endpoints . 
 
