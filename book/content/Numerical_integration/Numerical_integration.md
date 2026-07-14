@@ -479,7 +479,7 @@ In the above, we have focussed on integrating analytical functions. However, the
 
 One difference, however, is that we will not evaluate the values of the integrand by a function call, as we did above, but instead by looking up it's value in an array. 
 
-For this you will load data from a file `resource/asnlib/public/velocities.dat` included already on your notebook server. The file contains two columns of numbers, the first representing time $t$ in seconds and the second the $x$-velocity in meters per second of a particle, measured once every second from time $t=0$ to $t=100$ seconds.
+For this you will load data from a file `./velocities.dat` included already on your notebook server. The file contains two columns of numbers, the first representing time $t$ in seconds and the second the $x$-velocity in meters per second of a particle, measured once every second from time $t=0$ to $t=100$ seconds.
 
 **Exercise 6:** Read in the data and, using the trapezoidal rule, calculate from them the approximate distance traveled by the particle in the $x$ direction as a function of time.  
 
