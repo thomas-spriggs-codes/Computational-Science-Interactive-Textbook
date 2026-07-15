@@ -664,6 +664,7 @@ with open(location):
     pass # Initially this notebook does not recognise the file unless someone tries to read it first
 ```
 
+# References
 ```{bibliography}
 :style: unsrt
 :filter: docname in docnames
