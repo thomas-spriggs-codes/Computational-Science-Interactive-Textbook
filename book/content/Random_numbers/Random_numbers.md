@@ -74,11 +74,11 @@ print(y)
 ```
 
 ## Random numbers with distributions
-Here we will generate random numbers for a few of the most common distributions. SciPy provides a variety of random numbers with different distributions{cite:p}`scipy_random`.
+Here we will generate random numbers for a few of the most common distributions. SciPy provides a variety of random numbers with different distributions {cite:p}`scipy_random`.
 
 ### The uniform distribution
 
-Random numbers generated with the uniform distribution{cite:p}`wiki_cont_uniform_dist` have an equal probability to fall within an interval defined by the bounds $[a, b]$. The probability density function for the uniform distribution is
+Random numbers generated with the uniform distribution {cite:p}`wiki_cont_uniform_dist` have an equal probability to fall within an interval defined by the bounds $[a, b]$. The probability density function for the uniform distribution is
 
 $$
 p(x)=\left\{ \begin{array}{ll}\frac{1}{b-a} & \, \, \text{for} \, a \leq x \leq b\\0 & \, \, \text{else} \end{array}\right. \, .
@@ -168,7 +168,7 @@ answer_9_01_2 = np.copy(varx)
 
 ### Gaussian random numbers
 
-The Gaussian distribution, or normal distribution{cite:p}`wiki_normal_dist`, is a distribution that occurs a lot in physics. This is due to the fact that many physical observables are the result of a sum of a large number of random steps. In the limit of infinitely many of these steps, the distribution of this sum converges to the Gaussian distribution. The Gaussian probability density function is
+The Gaussian distribution, or normal distribution {cite:p}`wiki_normal_dist`, is a distribution that occurs a lot in physics. This is due to the fact that many physical observables are the result of a sum of a large number of random steps. In the limit of infinitely many of these steps, the distribution of this sum converges to the Gaussian distribution. The Gaussian probability density function is
 
 $$
 p(x)=\frac{1}{\sqrt{2 \pi \sigma^2}} \text{e}^{-(x-\mu)^2/2\sigma^2}

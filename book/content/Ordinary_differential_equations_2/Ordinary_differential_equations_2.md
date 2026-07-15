@@ -62,7 +62,7 @@ $$
 m \frac{d^2x}{dt^2} + c\frac{dx}{dt} + k x  = F_0 \cos(\omega t)
 $$
 
-For this equation, there is a steady-state solution{cite:p}`wiki_steady_state` for $x(t)$ given by:
+For this equation, there is a steady-state solution {cite:p}`wiki_steady_state` for $x(t)$ given by:
 
 $$
 x(t) = A(\omega) \cos \left[ \omega t + \theta(\omega) \right] 
@@ -174,7 +174,7 @@ If I want to check this, I need to extract the steady state response from the ti
 
 For estimating the steady state amplitude, we could do this by calculating the height of the last maximum of the oscillations. 
 
-**Exercise 1(b):** Find the steady state amplitude of the calculated time trace by finding the value of the amplitude of the last peak in the trace. For this, you can use the `find_peaks()` routine of `scipy`{cite:p}`scipy_find_peaks`:
+**Exercise 1(b):** Find the steady state amplitude of the calculated time trace by finding the value of the amplitude of the last peak in the trace. For this, you can use the `find_peaks()` routine of `scipy` {cite:p}`scipy_find_peaks`:
 
 to find all of the peaks of the oscillations. Make a plot of the peak values vs. time, and then extract an estimate of the steady state amplitude using the value of the last peak. 
 
@@ -449,7 +449,7 @@ There are some times where you want to constrain your solution of the differenti
 
 How does one approach such a problem? 
 
-One method for solving this is a technique known as the shooting method{cite:p}`wiki_shooting_method`. In the shooting method, one makes a guess at an initial velocity $v_i$ and then calculates the final position $x_f$. If you do not get it right in the first guess, you keep redoing the calculation with different $v_i$, using a technique such as binary search{cite:p}`wiki_binary_search` to find the initial velocity $v_i$ that gives the desired $x_f$.
+One method for solving this is a technique known as the shooting method {cite:p}`wiki_shooting_method`. In the shooting method, one makes a guess at an initial velocity $v_i$ and then calculates the final position $x_f$. If you do not get it right in the first guess, you keep redoing the calculation with different $v_i$, using a technique such as binary search {cite:p}`wiki_binary_search` to find the initial velocity $v_i$ that gives the desired $x_f$.
 
 _(The inspiration for the name of this technique comes from how one would hit a target with a cannon: a simple way is to take a trial shot, see where it lands, and then adjust the angle up and down until you get it right; or at least close enough to hit your enemy!)_
 
@@ -459,11 +459,11 @@ Neglecting air resistance, this problem is easy to solve (you can solve it with 
 
 We have learned already how to perform RK4 numerical integration of differential equations, and earlier in the course, we have also learned how to find zeros of a function efficiently using binary search. With the skills you have learned, you could easily write code to perform the shooting method directly yourself (and you may be asked to in the exam!). 
 
-However, here, we will explore how to implement the shooting method using some more advanced features of the solve_ivp(){cite:p}`scipy_solve_ivp_dupe` routine of the `scipy` library. To do this, we will make use of the optional parameter `events` of the `solve_ivp()` routine. This is a special way to tell `solve_ivp()` to detect conditions on the integration it is performing and stop the integration when that condition is satisfied. 
+However, here, we will explore how to implement the shooting method using some more advanced features of the solve_ivp() {cite:p}`scipy_solve_ivp_dupe` routine of the `scipy` library. To do this, we will make use of the optional parameter `events` of the `solve_ivp()` routine. This is a special way to tell `solve_ivp()` to detect conditions on the integration it is performing and stop the integration when that condition is satisfied. 
 
 The way `events=` parameter works is that you need define a function that gets passed your variables `y` and `t` and which should return a number. When your "event" function undergoes a zero crossing, then you can have `solve_ivp()` stop the integration automatically. You can also configure if this zero crossing is a "rising" or a "falling" edge trigger (see the assignment from week 1). 
 
-How do I use this `events` parameter in practice? The `events` parameter needs to take a object{cite:p}`python_classes` (or a list of objects in case you want to track many events).
+How do I use this `events` parameter in practice? The `events` parameter needs to take a object {cite:p}`python_classes` (or a list of objects in case you want to track many events).
 
 **Wait a minute: what the heck is an "object"?**
 
@@ -487,7 +487,7 @@ The object `x` also has functions built into it that can excute actions. For exa
 x2 = x.copy()
 <!-- #endraw -->
 
-Cool! But how do I make my own "object"? It sounds scary! In most languages, it requires some more detailed of knowledge of the language to do so... However, python has some great shortcuts that makes building your own objects very easily, on the fly, using a technique in python with a funny name called "monkey patching"{cite:p}`monkey_patching`.
+Cool! But how do I make my own "object"? It sounds scary! In most languages, it requires some more detailed of knowledge of the language to do so... However, python has some great shortcuts that makes building your own objects very easily, on the fly, using a technique in python with a funny name called "monkey patching" {cite:p}`monkey_patching`.
 
 You can construct the "object" that the `solve_ivp()` parameter `events=` requires by first creating a function that does what you need and then turn it into an "object" by adding some fields with the correct names. To be concrete, for our example of throwing a ball vertically in the air, we will want to stop the numerical integration once the height of the ball falls back down to zero. For this, I will need an event function that returns the height of the ball. If I choose my `y` variable array such that `y[0]` is the vertical position `x` and `y[1]` is the vertical velocity `v`, then my function would look like this:
 
@@ -683,7 +683,7 @@ answer_12_2b_2 = vi_theory
 ```
 
 
-**Exercise 2(c):** We will now add air resistance to our calculation. To make life simple, we will assume that the drag coefficient{cite:p}`wiki_drag` of our ball results in a friction force with the magnitude:
+**Exercise 2(c):** We will now add air resistance to our calculation. To make life simple, we will assume that the drag coefficient {cite:p}`wiki_drag` of our ball results in a friction force with the magnitude:
 
 $$
 |F_f| = Cv^2

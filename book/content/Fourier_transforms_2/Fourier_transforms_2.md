@@ -38,13 +38,13 @@ plt.rcParams['figure.dpi'] = 100
 
 ## Background information on Filtering Signals
 
-A common way to remove noise from your data is to apply a low-pass filter{cite:p}`wiki_low_pass`: 
+A common way to remove noise from your data is to apply a low-pass filter {cite:p}`wiki_low_pass`: 
 
-This is equivalent to passing an electrical signal through the following RC circuit{cite:p}`wiki_RC_circuit`:
+This is equivalent to passing an electrical signal through the following RC circuit {cite:p}`wiki_RC_circuit`:
 
 ![image](1st_Order_Lowpass_Filter_RC.svg.png)
 
-To predict what the output voltage is for a given input voltage, we need to know the infinite impulse response{cite:p}`wiki_impulse_response`, which is the response of the circuit to an input an input voltage that is a delta-function $\delta(0)$. For the circuit above, the impulse response is given by (see here{cite:p}`wiki_RC_impulse_response`):
+To predict what the output voltage is for a given input voltage, we need to know the infinite impulse response {cite:p}`wiki_impulse_response`, which is the response of the circuit to an input an input voltage that is a delta-function $\delta(0)$. For the circuit above, the impulse response is given by (see here {cite:p}`wiki_RC_impulse_response`):
 
 $$
 h(t) = \frac{1}{\tau} e^{-\frac{-t}{\tau}} \theta(t)
@@ -90,7 +90,7 @@ _(Aside: Any real filter you make in the lab will of course be "causal", but in 
 
 While it is possible to apply a low pass filter by convolving $V_{in}(t)$ with $h(\tau)$ using, for example, two nested `for` loops, it is far more common in practice to perform filtering in the frequency domain.
 
-To see how this works, we first look at an important mathematical result, known as the convolution theorem{cite:p}`wiki_conv_theorem`. Consider now a completely general function $c(x)$ given by the convolution of two function $f(x)$ and $g(x)$: 
+To see how this works, we first look at an important mathematical result, known as the convolution theorem {cite:p}`wiki_conv_theorem`. Consider now a completely general function $c(x)$ given by the convolution of two function $f(x)$ and $g(x)$: 
 
 $$
 c(x) = \int_{-\infty}^{\infty} f(y) g(x-y) dy
@@ -112,7 +112,7 @@ $$
 \tilde h(\omega) = \frac{1}{1+i\omega \tau}
 $$
 
-The Fourier transform $\tilde h(\omega)$ of the impulse response function is also referred to as the Transfer Function{cite:p}`wiki_transfer_function`. In our case, it tells you how the amplitude and phase of an oscillating input signal is related to the amplitude and phase of the output signal. Using phasor notation{cite:p}`wiki_phasor` $V(t) = \tilde V e^{-i\omega t}$, the input and output signals are related by:
+The Fourier transform $\tilde h(\omega)$ of the impulse response function is also referred to as the Transfer Function {cite:p}`wiki_transfer_function`. In our case, it tells you how the amplitude and phase of an oscillating input signal is related to the amplitude and phase of the output signal. Using phasor notation {cite:p}`wiki_phasor` $V(t) = \tilde V e^{-i\omega t}$, the input and output signals are related by:
 
 $$
 \tilde V_{out}(\omega) = \tilde h(\omega) \tilde V_{in}(\omega)
@@ -329,7 +329,7 @@ answer_8_1c_1 = np.copy(vfilt)
 
 What is strange about your filtered function at $t=0$? What is going on? 
 
-**Exercise 1(d):** We can solve the problem we saw in Exercise 1(c) by using zero-padding of the array during the Fourier transform. Read the documentation page of the numpy fft to learn how to do this{cite:p}`numpy_fft`:
+**Exercise 1(d):** We can solve the problem we saw in Exercise 1(c) by using zero-padding of the array during the Fourier transform. Read the documentation page of the numpy fft to learn how to do this {cite:p}`numpy_fft`:
 
 Write a new version of the low pass function `low_pass2()` function, this time padding this signal you are filtering with as many points as it already contains. If you do this correctly, it will eliminate the "boundary" effects from your FFT we saw above.  The ploting code to make a plot of your low-pass filtered data after filtering with the new function.
 
@@ -390,7 +390,7 @@ answer_8_1d_1 = np.copy(vfilt2)
 
 So far, we have been considering the Fourier transform of one-dimensional data, and thinking in particular about the case of signals varying in time, for which the Fourier transform gives a decomposition of the signal in the frequency domain. 
 
-In 2D, it is more typical to take the Fourier transform of spatial data (for example, of an image in space). In this case, the units of the axis of your Fourier transform is not frequency, but instead a two-dimensional wave vector{cite:p}`wiki_wavevector`, usually denoted by letter $k$, with units of inverse distance m$^{-1}$. For a 2D FT, the wave vector is a two-dimensional vector $\bf{k}$ with vector components $k_x$ and $k_y$.
+In 2D, it is more typical to take the Fourier transform of spatial data (for example, of an image in space). In this case, the units of the axis of your Fourier transform is not frequency, but instead a two-dimensional wave vector {cite:p}`wiki_wavevector`, usually denoted by letter $k$, with units of inverse distance m$^{-1}$. For a 2D FT, the wave vector is a two-dimensional vector $\bf{k}$ with vector components $k_x$ and $k_y$.
 
 The 2D FT is used extensively in solid-state physics, and also in image analysis. 
 

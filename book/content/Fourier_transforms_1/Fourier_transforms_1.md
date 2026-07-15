@@ -40,7 +40,7 @@ plt.rcParams['figure.dpi'] = 100
 
 ### Review of the Fourier Series
 
-A powerful and frequently used tool in computational science is the Discrete Fourier transform (DFT). The DFT can be thought of as the digital analog of the conventional Fourier transform{cite:p}`wiki_FT`:
+A powerful and frequently used tool in computational science is the Discrete Fourier transform (DFT). The DFT can be thought of as the digital analog of the conventional Fourier transform {cite:p}`wiki_FT`:
 
 For a function defined from $t=0$ to $t=T$, one can express that function mathematically with a Fourier series:
 
@@ -72,15 +72,15 @@ It turns out that some smart people (including Gauss in 1805) discovered that if
 
 Why is it called "Fast"? For $N=10^6$, the difference between $N^2$ and $N\log N$ is a big deal!! Say your calculation with the FFT takes 1 second. To perform the same calculation with a nested `for` loop would take $10^6$ seconds = 11 days. 1 second vs 11 days is a big deal! And it only gets worse: for $N=10^9$, the same hypothetical FFT would take 1000 seconds (16 minutes) vs 31 years!
 
-Understanding how the FFT is coded is an interesting problem in computer science, but the details of that are beyond the scope of this course: we will not code an FFT routine ourselves. *(If you're interested, you can find some more information here{cite:p}`github`* Fortunately, `numpy` provides a wide range of functions for working with FFTs{cite:p}`numpy_FFT`:
+Understanding how the FFT is coded is an interesting problem in computer science, but the details of that are beyond the scope of this course: we will not code an FFT routine ourselves. *(If you're interested, you can find some more information here {cite:p}`github`* Fortunately, `numpy` provides a wide range of functions for working with FFTs {cite:p}`numpy_FFT`:
 
 ### Other types of (related) Fourier Transforms
 
-In addition to the complex-valued transform described above, there are several of different types of closely related Fourier-type transforms{cite:p}`wiki_FT_routines`:
+In addition to the complex-valued transform described above, there are several of different types of closely related Fourier-type transforms {cite:p}`wiki_FT_routines`:
 
-Including the discrete sine transform (DST){cite:p}`wiki_DST`:
+Including the discrete sine transform (DST) {cite:p}`wiki_DST`:
 
-and the discrete cosine transform (DCT){cite:p}`wiki_DCT`:
+and the discrete cosine transform (DCT) {cite:p}`wiki_DCT`:
 
 The difference between the DFT, the DCT, and the DST is the type of boundary condition that is applied at the edges:
 
@@ -267,7 +267,7 @@ Before I reveal the function that can calculate the frequency axis for you, ther
 
 ### 1. Nyquist frequency
 
-The first is the "maximum" frequency that one can define for a time-sampled function (also known as the Nyquist frequency{cite:p}`wiki_nyquist`). To understand where the Nyquist frequency comes from, it is useful to take a look a what happens when you "sample" an oscillating signal. For this, I will consider a sine wave that is sampled at a 1 Hz sampling frequency. 
+The first is the "maximum" frequency that one can define for a time-sampled function (also known as the Nyquist frequency {cite:p}`wiki_nyquist`). To understand where the Nyquist frequency comes from, it is useful to take a look a what happens when you "sample" an oscillating signal. For this, I will consider a sine wave that is sampled at a 1 Hz sampling frequency. 
 
 For low enough frequencies, we can nicely see the shape of the sine wave:
 
@@ -313,7 +313,7 @@ With $f_s$ = Sampling frequency and $T$ = Total time of trace, the two important
 
 It is important that you know and understand these concepts! 
 
-Fortunately, though, there is also a function build into numpy for this called fftfreq(){cite:p}`numpy_fftfreq` that can automatically generate an appropriate vector representing the frequency axis of your FFT. To use it, you need to tell it the number of points in the array you transformed, and the spacing in time between the time points. 
+Fortunately, though, there is also a function build into numpy for this called fftfreq() {cite:p}`numpy_fftfreq` that can automatically generate an appropriate vector representing the frequency axis of your FFT. To use it, you need to tell it the number of points in the array you transformed, and the spacing in time between the time points. 
 
 For your trace, because we have been careful to use the `np.arange()` function, the spacing between the points is exactly `1/fs`. If you did not know for sure, you could also take `dt = t[1]-t[0]`.
 
@@ -405,7 +405,7 @@ plt.xlabel("Frequency (Hz)")
 
 Important to note when using fftshift: you should avoid shifting the data itself because the inverse transform function `np.fft.ifft()` assumes that it is in the original funny frequency ordering
 
-_Third observation:_ The maximum frequency in the plot is 50 Hz. Where does this come from? As discussed above, the maximum frequency is called the Nyquist frequency{cite:p}`wiki_nyquist`, and is related to the time spacing between the points in our original data array. The Nyquist frequency is equal to the half the sampling frequency. An intuitive picture is that to know that something is oscillating, you need at least two points per oscillation.
+_Third observation:_ The maximum frequency in the plot is 50 Hz. Where does this come from? As discussed above, the maximum frequency is called the Nyquist frequency {cite:p}`wiki_nyquist`, and is related to the time spacing between the points in our original data array. The Nyquist frequency is equal to the half the sampling frequency. An intuitive picture is that to know that something is oscillating, you need at least two points per oscillation.
 
 There is also a fourth observation as well in this picture, but to see that carefully, we will have to zoom in in the plot a bit.
 
@@ -561,7 +561,7 @@ $$
 \mathrm{Power\ Spectrum} = P = \frac{2|\tilde y (\omega)|^2}{(f_s T)^2}
 $$
 
-where $f_s$ is the sampling rate and $T$ is the total trace time. This is referred to as a "power spectrum" scaling (see this documentation{cite:p}`scipy_periodograpm` for more detail). For more reading on the definition of the power spectrum, and the associated quantity "power spectral density", see this wikipedia page{cite:p}`wiki_PSD`.
+where $f_s$ is the sampling rate and $T$ is the total trace time. This is referred to as a "power spectrum" scaling (see this documentation {cite:p}`scipy_periodograpm` for more detail). For more reading on the definition of the power spectrum, and the associated quantity "power spectral density", see this wikipedia page {cite:p}`wiki_PSD`.
 
 If you work it out, the power spectrum has units that is equal to the square of the units of the original trace $y(t)$. If $y(t)$ represents a voltage and has the units of volts $V$, then the power spectrum $P$ of $y(t)$ has the units of $V^2$. You can think of the name "power spectrum" as being inspired by the fact that the power dissipated by a resistor is proportional to $V^2$ ($P = V^2/R$).
 
