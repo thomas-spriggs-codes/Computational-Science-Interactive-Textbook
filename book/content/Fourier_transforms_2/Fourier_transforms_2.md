@@ -680,3 +680,8 @@ from validate_answers_FFT2 import *
 with open(location):
     pass # Initially this notebook does not recognise the file unless someone tries to read it first
 ```
+
+```{bibliography}
+:style: unsrt
+:filter: docname in docnames
+```
