@@ -1191,4 +1191,5 @@ with open(location):
 
 ```{bibliography}
 :style: unsrt
+:filter: docname in docnames
 ```
