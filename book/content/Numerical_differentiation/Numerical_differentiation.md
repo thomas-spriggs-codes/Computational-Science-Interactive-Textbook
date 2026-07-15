@@ -1189,7 +1189,7 @@ with open(location):
 ```
 
 
-## References {-}
+### References 
 ```{bibliography}
 :style: unsrt
 :filter: docname in docnames
