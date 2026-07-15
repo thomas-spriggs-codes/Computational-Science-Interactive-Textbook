@@ -329,7 +329,7 @@ answer_8_1c_1 = np.copy(vfilt)
 
 What is strange about your filtered function at $t=0$? What is going on? 
 
-**Exercise 1(d):** We can solve the problem we saw in Exercise 1(c) by using zero-padding of the array during the Fourier transform. Read the documentation page of the numpy fft to learn how to do this {cite:p}`numpy_fft`:
+**Exercise 1(d):** We can solve the problem we saw in Exercise 1(c) by using zero-padding of the array during the Fourier transform. Read the documentation page of the numpy fft to learn how to do this {cite:p}`numpy_fft_dupe`:
 
 Write a new version of the low pass function `low_pass2()` function, this time padding this signal you are filtering with as many points as it already contains. If you do this correctly, it will eliminate the "boundary" effects from your FFT we saw above.  The ploting code to make a plot of your low-pass filtered data after filtering with the new function.
 
