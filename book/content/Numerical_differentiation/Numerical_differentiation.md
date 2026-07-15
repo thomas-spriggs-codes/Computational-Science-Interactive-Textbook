@@ -13,8 +13,6 @@ jupyter:
     name: python3
 ---
 
-
-
 # Numerical Differentiation 
 
 In this notebook, you will explore taking numerical derivatives and implementating various interpolation schemes in one and two dimensions.
@@ -1189,7 +1187,7 @@ with open(location):
 ```
 
 
-### References 
+## References 
 ```{bibliography}
 :style: unsrt
 :filter: docname in docnames
