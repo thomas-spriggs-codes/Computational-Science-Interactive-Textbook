@@ -2,7 +2,9 @@
 
 ## Authors
 Gary Steele, Jeroen Kalkman, Thomas Spriggs, Eliska Greplova
+
 Faculty of Applied Sciences
+
 Delft University of Technology
 
 ## Keywords:
