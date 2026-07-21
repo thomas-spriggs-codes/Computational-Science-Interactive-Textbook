@@ -1,4 +1,4 @@
-# An introduction to computational methods in physics: a python interactive textbook
+# Colophon
 
 ## Authors
 Gary Steele, Jeroen Kalkman, Thomas Spriggs, Eliska Greplova\

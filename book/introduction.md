@@ -1,4 +1,5 @@
-# About this book
+# An introduction to computational methods in physics: a python interactive textbook
+## About this book
 In this book, you will learn to solve problems in physics using computational tools by programming these problems into a computer.
 
 ## Why are programming and computational tools important in physics?
