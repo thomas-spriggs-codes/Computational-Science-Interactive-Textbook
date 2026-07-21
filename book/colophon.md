@@ -9,6 +9,8 @@ Delft University of Technology
 Computational Science, Computational Physics, Numerical Methods
 
 ## Published by:
+![image](OPEN_reg.png)  
+
 TU Delft OPEN Publishing | Delft University of Technology, The Netherlands
 
 ## Copyright statement

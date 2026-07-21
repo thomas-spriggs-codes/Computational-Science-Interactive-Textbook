@@ -1,10 +1,11 @@
 format: jb-book
-root: colophon
+root: introduction.md
 parts: 
  - caption: Introduction
    numbered: False
    chapters: 
    - file: introduction.md
+   - file: colophon.md
  - caption: Course Content
    numbered: True
    chapters: 
