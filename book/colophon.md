@@ -5,10 +5,10 @@ Gary Steele, Jeroen Kalkman, Thomas Spriggs, Eliska Greplova\
 Faculty of Applied Sciences\
 Delft University of Technology
 
-## Keywords:
+## Keywords
 Computational Science, Computational Physics, Numerical Methods
 
-## Published by:
+## Published by
 ![image](OPEN_reg.png)  
 
 ## Copyright statement
@@ -20,7 +20,7 @@ This work is licensed under a Creative Commons Attribution 4.0 International (<a
 ## Method of Review statement
 This book emerged from the course content of TN2513 Computational Science at Delft University of Technology. This content was developed over a number of years and culminated in this textbook.
 
-## Use of AI statement: 
+## Use of AI statement
 No AI was used in the creation or development of this book.
 
 ## General Disclaimer TODO: change email to most stable email address to use
