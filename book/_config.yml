@@ -9,6 +9,7 @@ only_build_toc_files: true                           # Replace this with false i
 
 sphinx:                                              # Options passed on to the underlying sphinx-parser
   config:
+    home_page_in_navbar: true                        # Adds the link that's under the logo into the contents side-bar
     language: en                                     # Defines language (English) of everything except the content itself. For Dutch: replace with `nl`
     html_js_files:
     - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js # Required for live code: https://teachbooks.io/manual/features/live_code.html
