@@ -8,14 +8,6 @@ Delft University of Technology
 ## Keywords
 Computational Science, Computational Physics, Numerical Methods
 
-## Published by
-![image](OPEN_reg.png)  
-
-## Copyright statement
-![image](CC-BY_logo.png)  
-
-This work is licensed under a Creative Commons Attribution 4.0 International (<a href=https://creativecommons.org/licenses/by/4.0/>CC BY 4.0</a>) licence unless otherwise stated.
-©2026 published by TU Delft OPEN Publishing on behalf of the authors 
 
 ## Method of Review statement
 This book emerged from the course content of TN2513 Computational Science at Delft University of Technology. This content was developed over a number of years and culminated in this textbook.
@@ -30,5 +22,23 @@ Every attempt has been made to ensure the correct source of images and other pot
 We acknowledge discussions with Freek Pols, help from Tom Van Woudenberg from TeachBooks creating this book, and many contributions from all the teaching assistants that helped us run TN2513 over the years.
 
 ## Author contributions
-
 Gary Steele created the content of the content of the chapters Differentiation, Integration, Fourier Transforms, Ordinary Differential equations and Partial Differential Equations. Jeroen Kalkman created the content of the chapters on Root Finding, Linear Algebra, and Random Numbers. Gary Steele, Jeroen Kalkman and Eliska Greplova refined the content of all chapters while teaching the course TN2513 Computational Science at Delft University of Technology. Thomas Spriggs created this Jupyter book with input from Eliska Greplova.
+
+## Published by
+TU Delft OPEN Publishing | Delft University of Technology, The Netherlands
+
+```{figure} OPEN_reg.png
+---
+width: 300
+align: left
+```
+
+## Copyright statement
+```{figure} CC-BY_logo.png
+---
+width: 100
+align: left
+```
+
+This work is licensed under a Creative Commons Attribution 4.0 International (<a href=https://creativecommons.org/licenses/by/4.0/>CC BY 4.0</a>) licence unless otherwise stated.
+©2026 published by TU Delft OPEN Publishing on behalf of the authors 
