@@ -27,18 +27,18 @@ Gary Steele created the content of the content of the chapters Differentiation, 
 ## Published by
 TU Delft OPEN Publishing | Delft University of Technology, The Netherlands
 
-```{figure} OPEN_reg.png
----
-width: 300
-align: left
-```
-
 ## Copyright statement
+This work is licensed under a Creative Commons Attribution 4.0 International (<a href=https://creativecommons.org/licenses/by/4.0/>CC BY 4.0</a>) licence unless otherwise stated.
+©2026 published by TU Delft OPEN Publishing on behalf of the authors 
+
 ```{figure} CC-BY_logo.png
 ---
 width: 100
 align: left
 ```
 
-This work is licensed under a Creative Commons Attribution 4.0 International (<a href=https://creativecommons.org/licenses/by/4.0/>CC BY 4.0</a>) licence unless otherwise stated.
-©2026 published by TU Delft OPEN Publishing on behalf of the authors 
+```{figure} OPEN_reg.png
+---
+width: 300
+align: right
+```
