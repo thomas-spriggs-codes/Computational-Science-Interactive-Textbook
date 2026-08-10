@@ -4,6 +4,7 @@ parts:
  - caption: Preface
    numbered: False
    chapters: 
+   - file: introduction.md
    - file: colophon.md
  - caption: Course Content
    numbered: True
