@@ -34,13 +34,11 @@ This work is licensed under a Creative Commons Attribution 4.0 International (<a
 ```{figure} CC-BY_logo.png
 ---
 width: 100
-align: left
 ```
-<br>
+
 ## Test
 
 ```{figure} OPEN_reg.png
 ---
 width: 300
-align: right
 ```
