@@ -36,6 +36,8 @@ This work is licensed under a Creative Commons Attribution 4.0 International (<a
 width: 100
 align: left
 ```
+<br>
+## Test
 
 ```{figure} OPEN_reg.png
 ---
